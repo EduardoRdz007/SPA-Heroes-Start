@@ -1,0 +1,26 @@
+<div class="fast fadeIn">
+    <h2 class="display-4 pb-4">Heroes <small>DC & MARVEL</small></h2>
+
+    <div *ngIf=" Resultados.length == 0 " class="alert alert-info" role="alert">
+        No se encuentran resultados para el termino "<b>{{strBusqueda}}</b>"
+      </div>
+
+      <!--  If  -->
+      <!--si    NO -->
+        <!--TRUE    ELSE(FALSE)  -->
+        <!-- ==(comparativo) vs ===(comparativo restrictivo) -->
+        <div class="card-columns">
+            <div class="card" *ngFor="let hero of Resultados;">
+                <img src="../../../{{ hero.img }}" class="card-img-top animated fadeIn" alt="..." />
+                <div class="card-body">
+                <h5 class="card-title">{{ hero.nombre }}</h5>
+                <p class="card-text">{{ hero.bio.substring(0, 100) }}...</p>
+                <small>{{ hero.aparicion }}</small>
+                </div>
+    
+                <button class="btn btn-outline-success btn-block">Ver más...</button>
+            </div>
+        </div>
+    
+
+</div>

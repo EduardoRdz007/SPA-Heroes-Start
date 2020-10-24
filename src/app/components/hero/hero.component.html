@@ -1,0 +1,21 @@
+<div class="row">
+    <h2 class="col-10">Nombre Héroe <small>Año de aparición.</small></h2>
+    <div class="div-col-2">
+        <!-- [routerLink]="['about']": Regresa hacia lo declarado (heros) -->
+        <button [routerLink]="['/heros']" class="btn btn-outline-info btn-block">Regresar</button>
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div class="col-4">
+        <img src="{{hero.img}}">
+    </div>
+    <div class="col-8 ">
+        <h3 >Casa:</h3>
+        <img class="img-logo" src="../../../assets/img/img-logo.jpg" *ngIf = "hero.casa == 'Marvel'"  >
+        <img class="img-logo" src="../../../assets/img/imgLogo.jpg" *ngIf= "hero.casa == 'DC'" >
+        
+        <hr>
+        <p>{{hero.bio}}</p>
+    </div>
+</div>
